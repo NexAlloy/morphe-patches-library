@@ -1,3 +1,71 @@
+# [1.3.0](https://github.com/MorpheApp/morphe-patches-library/compare/v1.2.0...v1.3.0) (2026-05-05)
+
+
+### Bug Fixes
+
+* Patching can crash on Android 14 and lower ([fdea53d](https://github.com/MorpheApp/morphe-patches-library/commit/fdea53d8fb9c5f49338f0b1f0bad3100c59150fb))
+
+
+### Features
+
+* Add remove link verification patch ([81a31f4](https://github.com/MorpheApp/morphe-patches-library/commit/81a31f4182c7f4bed284d1b5e306a64497469001))
+
+# [1.3.0-dev.2](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.0-dev.1...v1.3.0-dev.2) (2026-05-05)
+
+
+### Bug Fixes
+
+* Patching can crash on Android 14 and lower ([fdea53d](https://github.com/MorpheApp/morphe-patches-library/commit/fdea53d8fb9c5f49338f0b1f0bad3100c59150fb))
+
+# [1.3.0-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.2.0...v1.3.0-dev.1) (2026-05-04)
+
+
+### Features
+
+* Add remove link verification patch ([81a31f4](https://github.com/MorpheApp/morphe-patches-library/commit/81a31f4182c7f4bed284d1b5e306a64497469001))
+
+# [1.2.0](https://github.com/MorpheApp/morphe-patches-library/compare/v1.1.1...v1.2.0) (2026-04-28)
+
+
+### Features
+
+* Add common helper methods ([#13](https://github.com/MorpheApp/morphe-patches-library/issues/13)) ([964c660](https://github.com/MorpheApp/morphe-patches-library/commit/964c660c2a71bfc6379280a227a3ae1610e4dc31))
+
+# [1.2.0-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.1.1...v1.2.0-dev.1) (2026-04-27)
+
+
+### Features
+
+* Add common helper methods ([#13](https://github.com/MorpheApp/morphe-patches-library/issues/13)) ([964c660](https://github.com/MorpheApp/morphe-patches-library/commit/964c660c2a71bfc6379280a227a3ae1610e4dc31))
+
+## [1.1.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.1.0...v1.1.1) (2026-04-27)
+
+
+### Bug Fixes
+
+* Use new Compatibility API in 'PatchListGenerator' ([dc0870d](https://github.com/MorpheApp/morphe-patches-library/commit/dc0870ddeda5d416b24c091189a55fe5eda54ae1))
+
+## [1.1.1-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.1.0...v1.1.1-dev.1) (2026-04-26)
+
+
+### Bug Fixes
+
+* Use new Compatibility API in 'PatchListGenerator' ([dc0870d](https://github.com/MorpheApp/morphe-patches-library/commit/dc0870ddeda5d416b24c091189a55fe5eda54ae1))
+
+# [1.1.0](https://github.com/MorpheApp/morphe-patches-library/compare/v1.0.4...v1.1.0) (2026-04-26)
+
+
+### Features
+
+* Add `accentOkButton` option to `CustomDialog` ([c8e35f4](https://github.com/MorpheApp/morphe-patches-library/commit/c8e35f492e57ee5928df67fe69310e5f4851c757))
+
+# [1.1.0-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.0.4...v1.1.0-dev.1) (2026-04-26)
+
+
+### Features
+
+* Add `accentOkButton` option to `CustomDialog` ([c8e35f4](https://github.com/MorpheApp/morphe-patches-library/commit/c8e35f492e57ee5928df67fe69310e5f4851c757))
+
 ## [1.0.4](https://github.com/MorpheApp/morphe-patches-library/compare/v1.0.3...v1.0.4) (2026-04-19)
 
 
