@@ -1,3 +1,59 @@
+## [1.3.4](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.3...v1.3.4) (2026-05-14)
+
+
+### Bug Fixes
+
+* Change all language preferences to use multiline ([dfe9fa3](https://github.com/MorpheApp/morphe-patches-library/commit/dfe9fa32702de2caeac63f9675e0b558b91fac70))
+
+## [1.3.4-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.3...v1.3.4-dev.1) (2026-05-13)
+
+
+### Bug Fixes
+
+* Change all language preferences to use multiline ([9999289](https://github.com/MorpheApp/morphe-patches-library/commit/9999289b11082b86e137bbe81d5ad33ecc255564))
+
+## [1.3.3](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.2...v1.3.3) (2026-05-12)
+
+
+### Bug Fixes
+
+* Use correct literal format for float/long returnEarly() ([833b2a9](https://github.com/MorpheApp/morphe-patches-library/commit/833b2a9b69bf19beb90ee1ff2c8d8cc8fdd55924))
+
+## [1.3.3-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.2...v1.3.3-dev.1) (2026-05-12)
+
+
+### Bug Fixes
+
+* Use correct literal format for float/long returnEarly() ([833b2a9](https://github.com/MorpheApp/morphe-patches-library/commit/833b2a9b69bf19beb90ee1ff2c8d8cc8fdd55924))
+
+## [1.3.2](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.1...v1.3.2) (2026-05-11)
+
+
+### Bug Fixes
+
+* Update to latest patcher ([b9bfb4c](https://github.com/MorpheApp/morphe-patches-library/commit/b9bfb4cb1a94af22b381f1f6d593af48eb5367ec))
+
+## [1.3.2-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.1...v1.3.2-dev.1) (2026-05-11)
+
+
+### Bug Fixes
+
+* Update to latest patcher ([b9bfb4c](https://github.com/MorpheApp/morphe-patches-library/commit/b9bfb4cb1a94af22b381f1f6d593af48eb5367ec))
+
+## [1.3.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.0...v1.3.1) (2026-05-10)
+
+
+### Bug Fixes
+
+* Improve logging ([3064bd4](https://github.com/MorpheApp/morphe-patches-library/commit/3064bd4812fc64cf2482cc8699f0a13c2ffb7a50))
+
+## [1.3.1-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.0...v1.3.1-dev.1) (2026-05-10)
+
+
+### Bug Fixes
+
+* Improve logging ([3064bd4](https://github.com/MorpheApp/morphe-patches-library/commit/3064bd4812fc64cf2482cc8699f0a13c2ffb7a50))
+
 # [1.3.0](https://github.com/MorpheApp/morphe-patches-library/compare/v1.2.0...v1.3.0) (2026-05-05)
 
 
