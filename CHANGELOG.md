@@ -1,3 +1,31 @@
+# [1.4.0-dev.4](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.0-dev.3...v1.4.0-dev.4) (2026-05-20)
+
+
+### Bug Fixes
+
+* Fix refactoring ([cb0cdc3](https://github.com/MorpheApp/morphe-patches-library/commit/cb0cdc34470976783dc6155b4dcd2532541b9f29))
+
+# [1.4.0-dev.3](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.0-dev.2...v1.4.0-dev.3) (2026-05-19)
+
+
+### Bug Fixes
+
+* Ignore replacing `packageName` field ([9e24bc5](https://github.com/MorpheApp/morphe-patches-library/commit/9e24bc531ff604b95e328ca230ea7044f68456bf))
+
+# [1.4.0-dev.2](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.0-dev.1...v1.4.0-dev.2) (2026-05-18)
+
+
+### Bug Fixes
+
+* Cleanup logging ([63c5ce5](https://github.com/MorpheApp/morphe-patches-library/commit/63c5ce570154618827ab2e004741104882cb4801))
+
+# [1.4.0-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.4...v1.4.0-dev.1) (2026-05-18)
+
+
+### Features
+
+* Add change package installer patch ([136bb71](https://github.com/MorpheApp/morphe-patches-library/commit/136bb711083aa2d397290db366fe7ea5ae30635e))
+
 ## [1.3.4](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.3...v1.3.4) (2026-05-14)
 
 
