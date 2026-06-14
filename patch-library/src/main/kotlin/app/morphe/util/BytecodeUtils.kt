@@ -196,6 +196,17 @@ fun InstructionFilter.matchAllMethodIndicesForEach(
     block
 )
 
+/**
+ * Verify exactly one match exists. This is the equivalent of calling [Fingerprint.matchAll]
+ * with a range of `1 .. 1`. This can be useful for fragile fingerprints that may match
+ * unrelated methods. This is an exhaustive search and will always be slower than the first match
+ * that [Fingerprint.match] provides.
+ *
+ * An exception is thrown if no matches exist or more than 1 match exists.
+ */
+context(patchContext: BytecodePatchContext)
+fun Fingerprint.matchSingle() = matchAll(1 .. 1).first()
+
 // TODO If this function remains unchanged for a while then move this to morphe-patcher.
 /**
  * Iterate across all method indexes that match an [Fingerprint].
@@ -348,7 +359,7 @@ fun Method.indexOfFirstResourceId(resourceName: String): Int {
 /**
  * Get the index of the first instruction with the id of the given resource name or throw a [PatchException].
  *
- * Requires [resourceMappingPatch] as a dependency.
+ * Requires [app.morphe.patches.all.misc.resources.resourceMappingPatch] as a dependency.
  *
  * @throws [PatchException] if the resource is not found, or the method does not contain the resource id literal value.
  * @see [indexOfFirstResourceId], [indexOfFirstLiteralInstructionReversedOrThrow]
@@ -861,8 +872,23 @@ fun BytecodePatchContext.forEachLiteralValueInstruction(
             }
         }
     }
-
 }
+
+
+@Deprecated(
+    "Method was renamed to Method.cloneParameters()",
+    replaceWith = ReplaceWith("cloneParameters()")
+)
+context(patchContext: BytecodePatchContext)
+fun Method.cloneMutableAndPreserveParameters() = cloneParameters()
+
+@Deprecated(
+    "Method was renamed to Method.cloneParameters()",
+    replaceWith = ReplaceWith("cloneParameters(mutableClass)")
+)
+context(patchContext: BytecodePatchContext)
+fun Method.cloneMutableAndPreserveParameters(mutableClass : MutableClass) = cloneParameters(mutableClass)
+
 
 /**
  * Additional registers effectively take the place of the pX parameters (p0, p1, p2, etc.)
@@ -873,7 +899,7 @@ fun BytecodePatchContext.forEachLiteralValueInstruction(
  * **Fingerprint match indexes will be increased positively by [numberOfParameterRegistersLogical]**.
  */
 context(patchContext: BytecodePatchContext)
-fun Method.cloneMutableAndPreserveParameters() = cloneMutableAndPreserveParameters(
+fun Method.cloneParameters() = cloneParameters(
     patchContext.mutableClassDefBy(definingClass)
 )
 
@@ -885,7 +911,7 @@ fun Method.cloneMutableAndPreserveParameters() = cloneMutableAndPreserveParamete
  *
  * **Fingerprint match indexes will be increased positively by [numberOfParameterRegistersLogical]**.
  */
-fun Method.cloneMutableAndPreserveParameters(mutableClass : MutableClass) : MutableMethod {
+fun Method.cloneParameters(mutableClass : MutableClass) : MutableMethod {
     check (!AccessFlags.STATIC.isSet(accessFlags) || parameters.isNotEmpty()) {
         "Static methods have no parameter registers to preserve"
     }
@@ -896,7 +922,7 @@ fun Method.cloneMutableAndPreserveParameters(mutableClass : MutableClass) : Muta
 
     // Replace existing method with cloned with more registers.
     mutableClass.methods.apply {
-        remove(this@cloneMutableAndPreserveParameters)
+        remove(this@cloneParameters)
         add(clonedMethod)
     }
 
