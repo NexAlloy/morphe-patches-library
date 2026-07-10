@@ -1,3 +1,117 @@
+# [1.5.0-dev.3](https://github.com/MorpheApp/morphe-patches-library/compare/v1.5.0-dev.2...v1.5.0-dev.3) (2026-07-08)
+
+
+### Bug Fixes
+
+* Use correct dialog localized 'ok' string ([2c6ca20](https://github.com/MorpheApp/morphe-patches-library/commit/2c6ca20d68b0401ff709715dc91b7c296039fed3))
+
+# [1.5.0-dev.2](https://github.com/MorpheApp/morphe-patches-library/compare/v1.5.0-dev.1...v1.5.0-dev.2) (2026-07-08)
+
+
+### Bug Fixes
+
+* Use localized language for dialog cancel/ok text ([f147b51](https://github.com/MorpheApp/morphe-patches-library/commit/f147b51964864655ca246ed5a2d01a51137476a6))
+
+# [1.5.0-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.2-dev.3...v1.5.0-dev.1) (2026-07-06)
+
+
+### Features
+
+* Add `FreeRegisterProvider.getFreeRegister4Bit()` ([a286ee9](https://github.com/MorpheApp/morphe-patches-library/commit/a286ee9c76cf2cbff84f3a64b334adf38c7f8c42))
+
+## [1.4.2-dev.3](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.2-dev.2...v1.4.2-dev.3) (2026-06-29)
+
+
+### Bug Fixes
+
+* Set app activity on app resume ([f17706a](https://github.com/MorpheApp/morphe-patches-library/commit/f17706a5717ee59e04820c5b0ece80e70fd88a85))
+
+## [1.4.2-dev.2](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.2-dev.1...v1.4.2-dev.2) (2026-06-28)
+
+
+### Bug Fixes
+
+* Add `parentsAll(Availability...)` overload to Setting ([#35](https://github.com/MorpheApp/morphe-patches-library/issues/35)) ([6e31b1c](https://github.com/MorpheApp/morphe-patches-library/commit/6e31b1c91c43eea9631e16c7046f75a0fbc3b136))
+
+## [1.4.2-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.1...v1.4.2-dev.1) (2026-06-28)
+
+
+### Bug Fixes
+
+* Ignore setting duplicate keys if the setting is not exported ([b95cabc](https://github.com/MorpheApp/morphe-patches-library/commit/b95cabc486a7fc25b2460b821b960c3cf6e2d3dd))
+
+## [1.4.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.0...v1.4.1) (2026-06-24)
+
+
+### Bug Fixes
+
+* Fix dim flash when closing nested `SheetBottomDialog` ([68637ef](https://github.com/MorpheApp/morphe-patches-library/commit/68637efc3ab797482f7c7569eef80d2b36eaf59b))
+* Fix landscape width and dim in `SheetBottomDialog` ([10d40bb](https://github.com/MorpheApp/morphe-patches-library/commit/10d40bbc1595a7a7fe5f7b5c73c56d3bcfd28790))
+* Forward `cancel()` to super to enable `OnCancelListener` ([8d10b99](https://github.com/MorpheApp/morphe-patches-library/commit/8d10b991311dcdc88f8bcc239d0be9c3954e76de))
+* Include compatibility app versions ([ea02ae5](https://github.com/MorpheApp/morphe-patches-library/commit/ea02ae5b346925f2999f946381484f85ca2e9b0e))
+* Missing semicolon causing failing type mismatch check ([#33](https://github.com/MorpheApp/morphe-patches-library/issues/33)) ([489978d](https://github.com/MorpheApp/morphe-patches-library/commit/489978d29cbf3922e296285f06b6befa2b0e3475))
+* Revert to system dim to fix landscape strips ([520dbe6](https://github.com/MorpheApp/morphe-patches-library/commit/520dbe6460c73d5a909c6e04fba804721e21e322))
+
+## [1.4.1-dev.6](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.1-dev.5...v1.4.1-dev.6) (2026-06-23)
+
+
+### Bug Fixes
+
+* Missing semicolon causing failing type mismatch check ([#33](https://github.com/MorpheApp/morphe-patches-library/issues/33)) ([489978d](https://github.com/MorpheApp/morphe-patches-library/commit/489978d29cbf3922e296285f06b6befa2b0e3475))
+
+## [1.4.1-dev.5](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.1-dev.4...v1.4.1-dev.5) (2026-06-21)
+
+
+### Bug Fixes
+
+* Include compatibility app versions ([ea02ae5](https://github.com/MorpheApp/morphe-patches-library/commit/ea02ae5b346925f2999f946381484f85ca2e9b0e))
+
+## [1.4.1-dev.4](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.1-dev.3...v1.4.1-dev.4) (2026-06-14)
+
+
+### Bug Fixes
+
+* Forward `cancel()` to super to enable `OnCancelListener` ([8d10b99](https://github.com/MorpheApp/morphe-patches-library/commit/8d10b991311dcdc88f8bcc239d0be9c3954e76de))
+
+## [1.4.1-dev.3](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.1-dev.2...v1.4.1-dev.3) (2026-06-14)
+
+
+### Bug Fixes
+
+* Revert to system dim to fix landscape strips ([520dbe6](https://github.com/MorpheApp/morphe-patches-library/commit/520dbe6460c73d5a909c6e04fba804721e21e322))
+
+## [1.4.1-dev.2](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.1-dev.1...v1.4.1-dev.2) (2026-06-14)
+
+
+### Bug Fixes
+
+* Fix landscape width and dim in `SheetBottomDialog` ([10d40bb](https://github.com/MorpheApp/morphe-patches-library/commit/10d40bbc1595a7a7fe5f7b5c73c56d3bcfd28790))
+
+## [1.4.1-dev.1](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.0...v1.4.1-dev.1) (2026-06-13)
+
+
+### Bug Fixes
+
+* Fix dim flash when closing nested `SheetBottomDialog` ([68637ef](https://github.com/MorpheApp/morphe-patches-library/commit/68637efc3ab797482f7c7569eef80d2b36eaf59b))
+
+# [1.4.0](https://github.com/MorpheApp/morphe-patches-library/compare/v1.3.4...v1.4.0) (2026-06-12)
+
+
+### Bug Fixes
+
+* `Dim` metrics values do not update when changing foldable device screen ([#28](https://github.com/MorpheApp/morphe-patches-library/issues/28)) ([0d254c1](https://github.com/MorpheApp/morphe-patches-library/commit/0d254c1a21dd2aa8cda3ecb82337754867aa0288))
+* Cleanup logging ([63c5ce5](https://github.com/MorpheApp/morphe-patches-library/commit/63c5ce570154618827ab2e004741104882cb4801))
+* Fix refactoring ([cb0cdc3](https://github.com/MorpheApp/morphe-patches-library/commit/cb0cdc34470976783dc6155b4dcd2532541b9f29))
+* Ignore replacing `packageName` field ([9e24bc5](https://github.com/MorpheApp/morphe-patches-library/commit/9e24bc531ff604b95e328ca230ea7044f68456bf))
+* Update to latest patcher ([b1051aa](https://github.com/MorpheApp/morphe-patches-library/commit/b1051aaf3724a79ccc8343f112aa4ad2f1ef987d))
+
+
+### Features
+
+* Add `Fingerprint.matchSingle()`` ([1c7f805](https://github.com/MorpheApp/morphe-patches-library/commit/1c7f8057a154b23ad9ae8cbcad9abe8e1849d1af))
+* Add change package installer patch ([136bb71](https://github.com/MorpheApp/morphe-patches-library/commit/136bb711083aa2d397290db366fe7ea5ae30635e))
+* Add ViewAnimations fade in/out utilities ([01027db](https://github.com/MorpheApp/morphe-patches-library/commit/01027db87738609ddda6fe9b11878de284b99b26))
+
 # [1.4.0-dev.8](https://github.com/MorpheApp/morphe-patches-library/compare/v1.4.0-dev.7...v1.4.0-dev.8) (2026-06-01)
 
 

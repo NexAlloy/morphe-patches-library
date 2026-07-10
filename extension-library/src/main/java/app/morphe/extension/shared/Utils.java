@@ -429,9 +429,9 @@ public class Utils {
         return activityRef.get();
     }
 
-    public static void setActivity(Activity mainActivity) {
-        Logger.printInfo(() -> "Set activity: " + mainActivity);
-        activityRef = new WeakReference<>(mainActivity);
+    public static void setActivity(Activity appActivity) {
+        Logger.printInfo(() -> "Set activity: " + appActivity);
+        activityRef = new WeakReference<>(appActivity);
     }
 
     public static Context getContext() {
@@ -448,8 +448,7 @@ public class Utils {
         // Must initially set context to check the app language.
         context = appContext;
 
-        // Set activity if not already set.
-        if (appContext instanceof Activity activity && getActivity() == null) {
+        if (appContext instanceof Activity activity) {
             setActivity(activity);
         }
 
@@ -1106,7 +1105,7 @@ public class Utils {
      *        when the size exceeds {@code maxSize}.
      */
     public static <T, V> Map<T, V> createSizeRestrictedMap(int maxSize) {
-        return new LinkedHashMap<>(2 * maxSize) {
+        return new LinkedHashMap<>(2 * maxSize, 0.5f) {
             @Override
             protected boolean removeEldestEntry(Entry eldest) {
                 return size() > maxSize;
