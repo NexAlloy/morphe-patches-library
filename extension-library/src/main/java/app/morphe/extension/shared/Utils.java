@@ -258,33 +258,6 @@ public class Utils {
         return meaninglessValue;
     }
 
-    public static boolean containsAny(String value, String... targets) {
-        return indexOfFirstFound(value, targets) >= 0;
-    }
-
-    public static int indexOfFirstFound(String value, String... targets) {
-        if (isNotEmpty(value)) {
-            for (String string : targets) {
-                if (!string.isEmpty()) {
-                    final int indexOf = value.indexOf(string);
-                    if (indexOf >= 0) return indexOf;
-                }
-            }
-        }
-        return -1;
-    }
-
-    public static boolean equalsAny(String value, String...targets) {
-        if (isNotEmpty(value)) {
-            for (String string : targets) {
-                if (value.equals(string)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     /**
      * Checks if a specific app package is installed and enabled on the device.
      *
@@ -309,15 +282,124 @@ public class Utils {
         }
     }
 
-    public static boolean startsWithAny(String value, String...targets) {
+    public static boolean containsAny(CharSequence value, CharSequence... targets) {
+        return indexOfFirstFound(value, targets) >= 0;
+    }
+
+    public static int indexOfFirstFound(CharSequence value, CharSequence... targets) {
         if (isNotEmpty(value)) {
-            for (String string : targets) {
-                if (isNotEmpty(string) && value.startsWith(string)) {
+            for (CharSequence string : targets) {
+                if (isNotEmpty(string)) {
+                    final int indexOf = indexOf(value, string);
+                    if (indexOf >= 0) return indexOf;
+                }
+            }
+        }
+        return -1;
+    }
+
+    public static boolean equalsAny(CharSequence value, CharSequence...targets) {
+        if (isNotEmpty(value)) {
+            for (CharSequence string : targets) {
+                if (value.equals(string)) {
                     return true;
                 }
             }
         }
         return false;
+    }
+
+
+    public static boolean startsWithAny(CharSequence value, CharSequence...targets) {
+        if (isNotEmpty(value)) {
+            for (CharSequence string : targets) {
+                if (isNotEmpty(string) && startsWith(value, string)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Same result as {@link String#startsWith(String)}.
+     */
+    public static boolean startsWith(CharSequence text, CharSequence prefix) {
+        int prefixLength = prefix.length();
+
+        if (prefixLength > text.length()) {
+            return false;
+        }
+
+        int index = 0;
+        while (--prefixLength >= 0) {
+            if (text.charAt(index) != prefix.charAt(index)) {
+                return false;
+            }
+            index++;
+        }
+        return true;
+    }
+
+    public static boolean contains(CharSequence text, CharSequence pattern) {
+        return indexOf(text, pattern) >= 0;
+    }
+
+    /**
+     * Same result as {@link String#indexOf(String)}.
+     */
+    public static int indexOf(CharSequence text, CharSequence pattern) {
+        return indexOf(text, pattern, 0);
+    }
+
+    /**
+     * Same result as {@link String#indexOf(String, int)}.
+     */
+    public static int indexOf(CharSequence text, CharSequence pattern, int fromIndex) {
+        final int start = Math.max(0, fromIndex);
+        final int patternLength = pattern.length();
+        final int textLength = text.length();
+        if (start >= textLength) {
+            return patternLength == 0 ? textLength : -1;
+        }
+        if (patternLength == 0) {
+            return start;
+        }
+        final char first = pattern.charAt(0);
+        final int max = textLength - patternLength;
+        for (int i = start; i <= max; i++) {
+            if (text.charAt(i) != first) {
+                continue;
+            }
+            int j = 1;
+            while (j < patternLength && text.charAt(i + j) == pattern.charAt(j)) {
+                j++;
+            }
+            if (j == patternLength) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Same result as {@link String#endsWith(String)}.
+     */
+    public static boolean endsWith(CharSequence text, String suffix) {
+        final int suffixLength = suffix.length();
+        if (suffixLength == 0) {
+            return true;
+        }
+        final int start = text.length() - suffixLength;
+        if (start < 0) {
+            return false;
+        }
+        for (int i = 0; i < suffixLength; i++) {
+            if (text.charAt(start + i) != suffix.charAt(i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public interface MatchFilter<T> {
@@ -468,8 +550,9 @@ public class Utils {
         clipboard.setPrimaryClip(clip);
     }
 
-    public static boolean isNotEmpty(@Nullable String str) {
-        return str != null && !str.isEmpty();
+    public static boolean isNotEmpty(@Nullable CharSequence str) {
+        // CharSequence.isEmpty() is only available with Android 15+.
+        return str != null && str.length() > 0;
     }
 
     public static boolean isTablet() {
