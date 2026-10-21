@@ -1,3 +1,17 @@
+# [1.9.0-dev.11](https://github.com/MorpheApp/morphe-patches-library/compare/v1.9.0-dev.10...v1.9.0-dev.11) (2026-10-20)
+
+
+### Bug Fixes
+
+* **Crash reporter:** Do not use newer API calls that R8 creates synthetic methods/classes that can collide with patches synthetic generated code ([02e31e5](https://github.com/MorpheApp/morphe-patches-library/commit/02e31e58d44d9f4555f26734e090423eedd6da14))
+
+# [1.9.0-dev.10](https://github.com/MorpheApp/morphe-patches-library/compare/v1.9.0-dev.9...v1.9.0-dev.10) (2026-10-20)
+
+
+### Bug Fixes
+
+* Include app version code in crash report, include partial hash of public signature ([97e920a](https://github.com/MorpheApp/morphe-patches-library/commit/97e920a6b32807211b3c08f5b9f23ca14562df5a))
+
 # [1.9.0-dev.9](https://github.com/MorpheApp/morphe-patches-library/compare/v1.9.0-dev.8...v1.9.0-dev.9) (2026-10-14)
 
 
